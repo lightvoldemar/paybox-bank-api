@@ -1,26 +1,26 @@
-# KassaNova Bank
-PHP library for KassaNova integration
+# Paybox Банк API
+PHP library for Paybox integration
 
-## Installation
+## Установка
 ```
-$ composer require lightvoldemar/kassanova-bank-api
+$ composer require lightvoldemar/paybox-bank-api
 ```
-## Example
+## Пример
 ```
-$amount; // transaction amount
-$orderId; // shop order id
-```
-```
-$client = new KassanovaClient();
-$client->setLang('ru');
-$client->setCurrency('KZT');
-$client->apiLogin = 'login';
-$client->apiPassword = 'pass';
-$client->returnUrl = 'success_url';
-$client->failUrl = 'fail_url';
-$client->pay($amount,$orderId);
+// Сумма платежа
+$amount; 
+// ID ордера
+$orderId; 
 ```
 ```
-$client->dataRedirectUrl; // Redirect user URL
-$client->dataOrderSig; // Order Kassanova ID
-```# paybox-bank-api
+// Создание объекта Paybox с параметрами ID ордера, тип платежа, сумма транзакции, соль.
+$oPayboxPay = new PayboxClient($order->id,$order->payment_type, $order->amount, $order->salt);
+// Генератор соли
+PayboxClient::generateSalt();
+// Генератор строки
+$oPayboxPay->generateSig();
+// Генератор ссылки с параметром типа счета
+$oPayboxPay->generateLink(PayboxClient::PURSE_PILLIKAN)
+
+```
+```
