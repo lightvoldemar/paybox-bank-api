@@ -1,5 +1,5 @@
 {
-    "name": "lightvoldemar/kassanova-bank-api",
+    "name": "lightvoldemar/paybox-bank-api",
     "type": "library",
     "require": {
         "yiisoft/yii2-httpclient": "*"
@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "KassanovaBankApi\\": "src/"
+            "PayboxBankApi\\": "src/"
         }
     }
 }
