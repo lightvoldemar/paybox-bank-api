@@ -1,0 +1,19 @@
+{
+    "name": "lightvoldemar/kassanova-bank-api",
+    "type": "library",
+    "require": {
+        "yiisoft/yii2-httpclient": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Light Voldemar",
+            "email": "light.voldemar@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "KassanovaBankApi\\": "src/"
+        }
+    }
+}
